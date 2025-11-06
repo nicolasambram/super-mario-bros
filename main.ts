@@ -1,6 +1,10 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     Mario.ax = 0
-    Mario.vy = -150
+    Mario.vy = -182
+})
+controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
+    Mario.ax = 0
+    Mario.vy = -182
 })
 let Mario: Sprite = null
 scene.setBackgroundImage(img`
@@ -125,7 +129,7 @@ scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     `)
-tiles.setCurrentTilemap(tilemap`nivel1`)
+tiles.setCurrentTilemap(tilemap`1-1`)
 Mario = sprites.create(img`
     . . . . . . . 2 2 2 2 2 . . . . 
     . . . . . . 2 2 2 2 2 2 2 2 2 . 
@@ -147,4 +151,4 @@ Mario = sprites.create(img`
 Mario.setPosition(20, 120)
 controller.moveSprite(Mario, 100, 0)
 scene.cameraFollowSprite(Mario)
-Mario.ay = 150
+Mario.ay = 250
